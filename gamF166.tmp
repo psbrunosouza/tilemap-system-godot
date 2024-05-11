@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://d4nkqxnvyje1"]
+
+[ext_resource type="Texture2D" uid="uid://c3jttybv2uvnq" path="res://tiles/grass.png" id="1_g0vk1"]
+[ext_resource type="Texture2D" uid="uid://ddfhrlc4x2lmq" path="res://tiles/hover.png" id="2_c7uu3"]
+[ext_resource type="Script" path="res://Map.gd" id="2_thyua"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eanc6"]
+resource_name = "grass"
+texture = ExtResource("1_g0vk1")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rtipj"]
+resource_name = "hover"
+texture = ExtResource("2_c7uu3")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_f7tve"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_eanc6")
+sources/1 = SubResource("TileSetAtlasSource_rtipj")
+
+[node name="Game" type="Node2D"]
+
+[node name="Map" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_f7tve")
+format = 2
+layer_0/name = "ground"
+layer_1/name = "hover"
+layer_1/tile_data = PackedInt32Array()
+script = ExtResource("2_thyua")
+
+[node name="Cam" type="Camera2D" parent="."]
+position = Vector2(480, 270)
+zoom = Vector2(2, 2)
