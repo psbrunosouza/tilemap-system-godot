@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4nkqxnvyje1"]
+
+[ext_resource type="PackedScene" uid="uid://chbkuljvpa14k" path="res://scenes/map.tscn" id="1_l27jk"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Map" parent="." instance=ExtResource("1_l27jk")]
+grid_size_x = null
+grid_size_y = null
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(541, 359)

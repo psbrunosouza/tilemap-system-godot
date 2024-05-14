@@ -11,16 +11,20 @@ config_version=5
 [application]
 
 config/name="inventory"
-run/main_scene="res://game.tscn"
+run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/resources/svgs/icon.svg"
 
 [display]
 
-window/size/viewport_width=1080
-window/size/viewport_height=720
-window/size/window_width_override=1080
-window/size/window_height_override=720
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/size/mode=3
+window/size/window_width_override=1920
+window/size/window_height_override=1080
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
-window/stretch/scale_mode="integer"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

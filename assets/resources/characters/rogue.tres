@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterResource" load_steps=3 format=3 uid="uid://b2qrukv1iuq6d"]
+
+[ext_resource type="Script" path="res://scripts/character_resource.gd" id="1_xcwma"]
+[ext_resource type="Texture2D" uid="uid://dj1m5d5ujghh1" path="res://assets/characters/rogue.png" id="2_di5dw"]
+
+[resource]
+script = ExtResource("1_xcwma")
+name = "rogue"
+texture = ExtResource("2_di5dw")
