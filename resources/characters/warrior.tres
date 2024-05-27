@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CharacterResource" load_steps=3 format=3 uid="uid://d1h67wfu2jxon"]
 
-[ext_resource type="Script" path="res://scripts/character_resource.gd" id="1_ra70m"]
+[ext_resource type="Script" path="res://scripts/resources/character_resource.gd" id="1_ra70m"]
 [ext_resource type="Texture2D" uid="uid://bxuoec353lx7t" path="res://assets/characters/warrior.png" id="2_hnab1"]
 
 [resource]

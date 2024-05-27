@@ -1,12 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://d4nkqxnvyje1"]
 
-[ext_resource type="PackedScene" uid="uid://chbkuljvpa14k" path="res://scenes/map.tscn" id="1_l27jk"]
+[ext_resource type="PackedScene" uid="uid://chbkuljvpa14k" path="res://scenes/map.tscn" id="1_uei0v"]
 
 [node name="Game" type="Node2D"]
 
-[node name="Map" parent="." instance=ExtResource("1_l27jk")]
-grid_size_x = 8
-grid_size_y = 8
+[node name="Map" parent="." instance=ExtResource("1_uei0v")]
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(481, 271)

@@ -1,16 +1,18 @@
 extends Node2D
 class_name Piece
 
-@export var character_resource: CharacterResource: set = set_character
-@export var sprite: Sprite2D: set = set_sprite
-var coordinate: Vector2i :set = set_coordinate
-
-func set_sprite(_sprite: Sprite2D):
-	sprite = _sprite
+var coordinate: Vector2i: set = set_coordinate
+var resource: CharacterResource: set = set_character
+var sprite: Sprite2D 
+var map_tile_size: int = 32
 
 func set_coordinate(_coordinate: Vector2i) -> void:
 	coordinate = _coordinate
-	global_position = Vector2(_coordinate.x * 32 + 16, _coordinate.y * 32 + 16)
+	var coordinate_x = _coordinate.x * map_tile_size + (map_tile_size / 2)
+	var coordinate_y = _coordinate.y * map_tile_size + (map_tile_size / 2)
+	global_position = Vector2(coordinate_x, coordinate_y)
 
-func set_character(_character: CharacterResource) -> void:
-	character_resource = _character
+func set_character(_resource: CharacterResource) -> void:
+	sprite = $Sprite
+	resource = _resource
+	sprite.texture = resource.texture
